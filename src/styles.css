@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn-blue {
+  background-color: blue;
+  color: white;
+}
+.btn-blue:hover {
+  background-color: steelblue;
+}
+.btn-red {
+  background-color: red;
+  color: white;
+}
+.btn-green {
+  background-color: green;
+  color: white;
+}
+
+.contain {
+  background: #222;
+  color: #fff;
+}
+
+.imagen {
+  width: 300px;
+  height: 200px;
+}

@@ -1,5 +1,8 @@
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
+//import "./styles.css";
+
 //*ReactDOM= significa react para el dom
 
 const element = document.getElementById("root");
@@ -14,6 +17,12 @@ const root = ReactDOM.createRoot(element);
   TODO -> CUANDO UNA FUNCION DEVUELVE COMO JSX SE LO CONOCE COMO COMPONENTE
   TODO -> UN COMPONENTE DEBE TENER LA PRIMER LETRA EN MAYUSCULA
   TODO -> JSX ES LA CREACION DE ELEMENTOS HTML
+  TODO -> SPA S=SINGLE P=PAGE A=APPLICATION
+
 */
 
-root.render(<App />); //*ES XML EN JAVASCRIPT
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+); //*ES XML EN JAVASCRIPT
