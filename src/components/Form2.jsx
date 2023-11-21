@@ -1,10 +1,17 @@
 import { useState } from "react";
 export const Form2 = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [form, setForm] = useState({
+    email:"",
+    password:""
+  });
+  const handleChage = ({target}) =>{
+    setForm({
+      ...form,
+      [target.name]:target.value
+    })
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ email, password });
   };
   return (
     <div>
@@ -22,10 +29,8 @@ export const Form2 = () => {
               type="text"
               className="form-control"
               name="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              value={form.email}
+              onChange={handleChage}
             />
           </div>
         </div>
@@ -38,11 +43,8 @@ export const Form2 = () => {
               type="password"
               name="password"
               className="form-control"
-              value={password}
-              onChange={(e) => {
-                const valorDelInput = e.target.value;
-                setPassword(valorDelInput);
-              }}
+              value={form.password}
+              onChange={handleChage}
             />
           </div>
         </div>
