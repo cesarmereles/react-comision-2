@@ -1,15 +1,20 @@
-import { useState } from "react";
+//import { useState } from "react";
+import { useForm } from "../hooks/useForm";
 export const Form2 = () => {
-  const [form, setForm] = useState({
-    email:"",
-    password:""
+  // const [form, setForm] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  // const handleChage = ({ target }) => {
+  //   setForm({
+  //     ...form,
+  //     [target.name]: target.value,
+  //   });
+  // };
+  const { form, handleChage } = useForm({
+    email: "",
+    password: "",
   });
-  const handleChage = ({target}) =>{
-    setForm({
-      ...form,
-      [target.name]:target.value
-    })
-  }
   const handleSubmit = (e) => {
     e.preventDefault();
   };
