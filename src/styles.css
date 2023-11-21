@@ -29,3 +29,9 @@
   width: 300px;
   height: 200px;
 }
+.dark-bg {
+  background-color: #222;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
